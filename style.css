@@ -184,6 +184,14 @@ header {
   letter-spacing: 7px;
   font-size: 1rem;
 }
+@media (max-width: 576px) {
+  #banner h1 {
+    font-size: 3rem;
+  }
+  #banner p {
+    font-size: 0.7rem;
+  }
+}
 /* agency section starts here  */
 #about-agency {
   width: 100%;
@@ -194,7 +202,6 @@ header {
 }
 .w-dive {
   position: relative;
-  padding: 100px;
 }
 #about-agency .w-dive h2 {
   color: rgba(255, 255, 255, 0.836);
@@ -212,7 +219,7 @@ header {
   column-gap: 30px;
   row-gap: 30px;
   flex-wrap: wrap;
-  padding-top: 40px;
+  padding-top: 130px;
 }
 .feature-card {
   width: 400px;
@@ -246,7 +253,11 @@ header {
   font-size: 14px;
   color: #b5c5cc;
 }
-
+@media (max-width: 576px) {
+  #about-agency {
+    padding: 100px 20px;
+  }
+}
 /* agency section starts here  */
 
 /* our services section start here  */
@@ -278,6 +289,11 @@ header {
 }
 .service-card h3 {
   padding: 20px 0 10px;
+}
+@media (max-width: 576px) {
+  #our-services {
+    padding: 100px 20px;
+  }
 }
 /* our services section ends here  */
 
@@ -335,6 +351,9 @@ header {
     display: flex;
     flex-direction: column-reverse;
   }
+  .articles {
+    padding: 40px 20px;
+  }
 }
 /* blog section ends here  */
 
@@ -343,6 +362,10 @@ header {
   background-color: white;
   padding: 50px 30px;
   text-align: center;
+}
+#campaign .w-dive {
+  position: relative;
+  padding-top: 100px;
 }
 #campaign .w-dive h2 {
   color: rgba(0, 0, 0, 0.582);
@@ -353,7 +376,7 @@ header {
   width: 150px;
 }
 #campaign h3 {
-  margin-top: 50px;
+  margin-top: 150px;
   font-size: 2.1rem;
   font-weight: 400;
   color: #000000;
@@ -402,6 +425,11 @@ header {
 .campaign-two {
   flex: 1;
 }
+@media (max-width: 576px) {
+  #campaign {
+    padding: 50px 20px;
+  }
+}
 
 /* campaign section ends here  */
 
@@ -438,6 +466,11 @@ aside .card p {
 aside .card i {
   font-size: 3.5rem;
   color: white;
+}
+@media (max-width: 576px) {
+  aside {
+    padding: 100px 20px;
+  }
 }
 /* aside ends here  */
 
@@ -484,6 +517,11 @@ aside .card i {
 .article-dog-desc span:hover {
   background-color: #000000;
 }
+@media (max-width: 576px) {
+  #banner-two {
+    padding: 100px 20px;
+  }
+}
 /* banner-two ends here  */
 
 /* our-team starts here  */
@@ -491,6 +529,10 @@ aside .card i {
   background-color: white;
   text-align: center;
   padding: 50px 30px;
+}
+#our-team .w-dive {
+  position: relative;
+  padding: 115px 10px;
 }
 #our-team h2 {
   color: rgba(0, 0, 0, 0.582);
@@ -550,6 +592,11 @@ aside .card i {
 .team-card .social-icon i:hover {
   color: #23b4f2;
 }
+@media (max-width: 576px) {
+  #our-team {
+    padding: 50px 20px;
+  }
+}
 
 /* our-team ends here  */
 
@@ -561,6 +608,10 @@ aside .card i {
   padding: 100px 30px;
   text-align: center;
 }
+#banner-three .w-dive {
+  position: relative;
+  padding: 100px 0;
+}
 #banner-three .w-dive h2 {
   color: white;
 }
@@ -570,79 +621,77 @@ aside .card i {
   width: 150px;
 }
 .form {
-  width: 70vw;
-  max-width: 70vw;
-  padding: 50px 40px;
+  width: 100%;
+  max-width: 600px;
   margin: auto;
   display: flex;
   flex-direction: column;
-  column-gap: 30px;
-  row-gap: 30px;
+  gap: 30px;
+  /* padding: 10px; */
 }
-.form .inputs {
-  width: 100%;
+
+.inputs {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
 
-  column-gap: 10px;
-  row-gap: 30px;
-}
-.form .inputs input {
-  width: 48%;
+.inputs input {
+  width: 47%;
   font-size: 1rem;
   border: 1px solid #5c5858;
-  color: #f5f5f5;
-  background: transparent;
+  color: #e9e9e9; /* Changed for better readability */
+  background-color: transparent; /* Changed for better contrast */
   padding: 15px;
-  outline: 0;
+  outline: none;
+  box-sizing: border-box;
 }
-input {
-  width: 100%;
-  font-size: 1rem;
-  border: 1px solid #5c5858;
-  color: #f5f5f5;
-  background: transparent;
-  padding: 15px;
-  outline: 0;
-}
-input:focus {
-  border: 1px solid #3c8daf;
-}
-textarea:focus {
-  border: 1px solid #3c8daf;
-}
+
+input,
 textarea {
   font-size: 1rem;
   border: 1px solid #5c5858;
-  color: #f5f5f5;
-  background: transparent;
-  padding: 15px 10px 0;
-  outline: 0;
+  color: #e9e9e9;
+  background-color: transparent;
+  padding: 15px;
+  outline: none;
+  box-sizing: border-box;
 }
+
+input:focus,
+textarea:focus {
+  border-color: #3c8daf;
+}
+
+textarea {
+  resize: none;
+}
+
 button {
   border: 2px solid #11749e;
   background-color: #11749e;
-  color: #f5f5f5;
+  color: #fff;
   font-size: 24px;
   padding: 15px;
   border-radius: 4px;
+  cursor: pointer;
 }
+
 button:hover {
   opacity: 0.9;
 }
-@media (max-width: 668px) {
-  .form {
-    width: 90vw;
-    max-width: 90vw;
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  #banner-three {
+    padding: 100px 20px;
   }
-  .form .inputs {
-    flex-wrap: wrap;
-  }
-  .form .inputs input {
+  .inputs input {
     width: 100%;
   }
 }
+
 /* banner three section ends here  */
 
 /* google-map starts here  */
